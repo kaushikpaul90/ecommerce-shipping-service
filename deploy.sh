@@ -14,8 +14,8 @@ fi
 echo "📦 Applying Kubernetes manifests..."
 
 # Apply all manifests
-kubectl apply -f k8s/shipping-deployment.yaml
-kubectl apply -f k8s/shipping-service.yaml
+kubectl apply -f k8s/shipping-deployment-template.yaml
+kubectl apply -f k8s/shipping-service-template.yaml
 
 echo "⏳ Waiting for all pods to become ready..."
 kubectl wait --for=condition=available --timeout=120s deployment/shipping-service
