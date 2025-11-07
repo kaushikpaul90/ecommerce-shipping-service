@@ -7,7 +7,8 @@ import httpx
 
 app = FastAPI(title="Shipping Service")
 
-DATABASE_SERVICE_URL = os.getenv("DATABASE_SERVICE_URL", "http://localhost:8000")
+# DATABASE_SERVICE_URL = os.getenv("DATABASE_SERVICE_URL", "http://localhost:8000")
+DATABASE_SERVICE_URL = os.getenv("DATABASE_SERVICE_URL", "http://192.168.105.2:30000")
 # If true, shipping will be simulated synchronously and status toggled to 'shipped' or 'failed'
 PROCESS_SHIPPING_SYNC = os.getenv("PROCESS_SHIPPING_SYNC", "true").lower() != "false"
 
